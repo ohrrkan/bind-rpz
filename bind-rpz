@@ -1,7 +1,6 @@
 import re
 import requests
 import os
-from urllib.parse import urlparse
 
 ret_noerror = 0
 outfilename = 'db.banlist'
@@ -14,7 +13,11 @@ links=['https://easylist.to/easylist/easylist.txt',
 'https://easylist-downloads.adblockplus.org/easylistitaly.txt',
 'https://easylist-downloads.adblockplus.org/easylistdutch.txt',
 'https://easylist-downloads.adblockplus.org/liste_fr.txt',
-'https://easylist-downloads.adblockplus.org/easylistchina.txt']
+'https://easylist-downloads.adblockplus.org/easylistchina.txt',
+'https://raw.githubusercontent.com/bongochong/CombinedPrivacyBlockLists/master/cpbl-abp-list.txt',
+'https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt',
+'https://easylist-downloads.adblockplus.org/fanboy-notifications.txt',
+'https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt']
 
 fd = open(outfilenametmp, "w")
 
