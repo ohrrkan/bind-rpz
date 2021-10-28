@@ -2,7 +2,7 @@ import re
 import requests
 import os
 
-ret_noerror = 0
+ret_noerror = 1
 outfilename = 'db.banlist'
 outfilenametmp = 'db.banlist.tmp'
 
