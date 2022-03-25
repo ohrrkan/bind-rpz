@@ -1,23 +1,25 @@
 # bind-rpz
 Create Bind response policy zones from Adblock filter standard
 
-[USAGE]
+## Usage
 
-0) Configration if need you can :
+<ol>
+	<li>Configration</li>
 
-Edit "ret_noerror" to change bind dns return => '0' for a NXDOMAIN return or '1' for a NOERROR
+Edit "ret_noerror" to change bind dns return => '0' for a NXDOMAIN return or '1' for a NOERROR.<br>
+You can also edit the SRC url list in the 'links' variable
  
-2) Generate the policy zone with :
+<li> Generate the policy zone</li>
 
 python3 bind-rpz.py
 
-3) Add in your bind configuration options (Generally /etc/bind/named.conf.options)
+<li>Add in your bind configuration options (Generally /etc/bind/named.conf.options)</li>
 
 options {
 response-policy { zone "banlist"; };
 }
 
-4) Add a zone where "file" path link to the generate file in step 2
+<li>Add a zone where "file" path link to the generate file in step 2</li>
 
 zone "banlist" {
 	type master;
@@ -25,3 +27,4 @@ zone "banlist" {
 	allow-query {none;};
  };
  
+</ol>
